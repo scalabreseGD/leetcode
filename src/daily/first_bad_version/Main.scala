@@ -1,4 +1,4 @@
-package first_bad_version
+package daily.first_bad_version
 
 import java.util.concurrent.atomic.AtomicInteger
 
