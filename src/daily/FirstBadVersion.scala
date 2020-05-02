@@ -1,8 +1,8 @@
-package daily.first_bad_version
+package daily
 
 import java.util.concurrent.atomic.AtomicInteger
 
-object Main {
+object FirstBadVersion {
 
 
   class VersionControl(limitVersion: Int) {
