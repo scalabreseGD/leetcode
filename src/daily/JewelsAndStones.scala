@@ -21,7 +21,7 @@ object JewelsAndStones {
   }
 
   def main(args: Array[String]): Unit = {
-    assert(numJewelsInStones(J = "aA", S = "aAAbbbb") == 3)
-    assert(numJewelsInStones(J = "z", S = "ZZ") == 0)
+    assert(numJewelsInStonesReduce(J = "aA", S = "aAAbbbb") == 3)
+    assert(numJewelsInStonesReduce(J = "z", S = "ZZ") == 0)
   }
 }
