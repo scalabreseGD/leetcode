@@ -3,15 +3,14 @@ package daily
 object FirstUniqChar {
 
   def firstUniqChar(s: String): Int = {
-    firstUniqChar604(s)
+    firstUniqChar568(s)
   }
 
-  def firstUniqChar604(s: String): Int = {
-    s.map(char => (s.indexOf(char), s.lastIndexOf(char)))
-      .filter(elem => elem._1 != -1 && elem._1 == elem._2)
-      .sortBy(_._1)
-      .headOption
-      .map(_._1).getOrElse(-1)
+  def firstUniqChar568(s: String): Int = {
+    s.foldLeft(Seq.empty[Int])((acc, comb) => {
+      val firstIndex = s.indexOf(comb)
+      if (firstIndex == s.lastIndexOf(comb)) acc.+:(firstIndex) else acc
+    }).sorted.headOption.getOrElse(-1)
   }
 
   def firstUniqChar656(s: String): Int = {
@@ -35,6 +34,7 @@ object FirstUniqChar {
   }
 
   def main(args: Array[String]): Unit = {
-    print(firstUniqChar("loveleetcode"))
+    println(firstUniqChar("loveleetcode"))
+    println(firstUniqChar(""))
   }
 }
