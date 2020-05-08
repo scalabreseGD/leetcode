@@ -1,4 +1,4 @@
-package daily
+package daily.week1
 
 object MajorityElement {
 

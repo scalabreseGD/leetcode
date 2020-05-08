@@ -1,6 +1,4 @@
-package daily
-
-import daily.CousinsInBinaryTree.Solution.isCousins
+package daily.week1
 
 object CousinsInBinaryTree {
 
@@ -24,19 +22,20 @@ object CousinsInBinaryTree {
         .zip(findDepth(y, root.value, root, 0))
         .exists(pair => pair._1._2 != pair._2._2 && pair._1._1 == pair._2._1)
     }
-  }
 
-  def main(args: Array[String]): Unit = {
-    val tree = new TreeNode(1,
-      new TreeNode(2, null, new TreeNode(4)),
-      new TreeNode(3, null, new TreeNode(5))
-    )
-    val tree2 = new TreeNode(1,
-      new TreeNode(2, null, new TreeNode(4)),
-      new TreeNode(3, null, null)
-    )
-    assert(isCousins(tree, 5, 4))
-    assert(!isCousins(tree2, 2, 3))
+
+    def main(args: Array[String]): Unit = {
+      val tree = new TreeNode(1,
+        new TreeNode(2, null, new TreeNode(4)),
+        new TreeNode(3, null, new TreeNode(5))
+      )
+      val tree2 = new TreeNode(1,
+        new TreeNode(2, null, new TreeNode(4)),
+        new TreeNode(3, null, null)
+      )
+      assert(isCousins(tree, 5, 4))
+      assert(!isCousins(tree2, 2, 3))
+    }
   }
 
 }

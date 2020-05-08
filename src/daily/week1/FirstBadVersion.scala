@@ -1,4 +1,4 @@
-package daily
+package daily.week1
 
 import java.util.concurrent.atomic.AtomicInteger
 
