@@ -78,17 +78,4 @@ object PrefixTrie {
 
   }
 
-  def main(args: Array[String]): Unit = {
-    //["Trie","insert","search","search","startsWith","insert","search"]
-    //[[],["apple"],["apple"],["app"],["app"],["app"],["app"]]
-    val trie = new TrieRec
-    trie.insert("a")
-    trie.insert("apple")
-    assert(trie.search("apple"))
-    assert(!trie.search("app"))
-    assert(trie.startsWith("app"))
-    trie.insert("app")
-    assert(trie.search("app"))
-  }
-
 }
